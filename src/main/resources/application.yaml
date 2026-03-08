@@ -1,11 +1,11 @@
 server:
-  port: 99999
+  port: 9999
 
 spring:
   application:
     name: webflux-gateway
 
   r2dbc:
-    url: r2dbc:postgresql://localhost:16801/gateway
-    username: gt
-    password: gt
+    url: r2dbc:postgresql://localhost:16666/public
+    username: pro
+    password: pro

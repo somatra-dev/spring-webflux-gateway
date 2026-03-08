@@ -1,0 +1,20 @@
+services:
+  # postgres for gateway information
+  gateway-db:
+    image: postgres:17.7
+    container_name: gateway-db
+    ports:
+      - "16666:5432"
+    environment:
+      POSTGRES_USER: pro
+      POSTGRES_PASSWORD: pro
+    networks:
+      - gateway-net
+
+    volumes:
+      - gateway_data:/var/lib/postgresql/data
+volumes:
+  gateway_data:
+networks:
+  gateway-net:
+    external: true
