@@ -12,6 +12,7 @@ services:
       - gateway-net
 
     volumes:
+      - ./resources/script/data.sql:/docker-entrypoint-initdb.d/data.sql
       - gateway_data:/var/lib/postgresql/data
 volumes:
   gateway_data:

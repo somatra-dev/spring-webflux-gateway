@@ -2,10 +2,10 @@ package co.pesexpo.webfluxgateway.domain;
 
 
 import co.pesexpo.webfluxgateway.config.auditable_jpa.Auditable;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.*;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Getter
@@ -14,8 +14,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Entity
-@Table(name = "api_routes")
+@Table("api_routes")
 public class ApiRouteEntity extends Auditable<String> {
 
     @Id
@@ -25,9 +24,6 @@ public class ApiRouteEntity extends Auditable<String> {
     private String path;
     private String method;
     private String description;
-
-    @Column(name = "group_code")
     private String groupCode;
     private String status;
-
 }

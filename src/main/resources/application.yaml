@@ -6,6 +6,11 @@ spring:
     name: webflux-gateway
 
   r2dbc:
-    url: r2dbc:postgresql://localhost:16666/public
+    url: r2dbc:postgresql://localhost:16666/postgres
     username: pro
     password: pro
+
+  sql:
+    init:
+      mode: always          # runs schema.sql / data.sql on startup
+      schema-locations: classpath:script/data.sql

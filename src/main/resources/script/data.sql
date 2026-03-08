@@ -9,5 +9,9 @@ CREATE TABLE IF NOT EXISTS api_routes(
     group_code VARCHAR(255) NOT NULL,
     status VARCHAR(255) NOT NULL,
 
-    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    -- match Auditable field names (camelCase → snake_case)
+    created_by        VARCHAR(255),
+    created_date      TIMESTAMP,
+    last_modified_by  VARCHAR(255),
+    last_modified_date TIMESTAMP
 );

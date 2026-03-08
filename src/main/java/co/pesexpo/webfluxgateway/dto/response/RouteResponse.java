@@ -17,7 +17,5 @@ public record RouteResponse(
         @JsonProperty("updated_at") String updatedAt,
         @JsonProperty("updated_by") String updatedBy
 
-
-
         ) {
 }

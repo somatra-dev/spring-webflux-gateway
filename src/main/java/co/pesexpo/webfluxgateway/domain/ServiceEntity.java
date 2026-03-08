@@ -1,8 +1,8 @@
 package co.pesexpo.webfluxgateway.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Getter
@@ -11,13 +11,13 @@ import org.springframework.data.relational.core.mapping.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Entity
 @Table(name = "services")
 public class ServiceEntity {
 
     @Id
     private Long id;
 
+    @Column("service_name")
     private String serviceName;
 
     private String description;
