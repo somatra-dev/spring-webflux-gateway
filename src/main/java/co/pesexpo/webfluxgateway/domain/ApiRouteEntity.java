@@ -30,5 +30,4 @@ public class ApiRouteEntity extends Auditable<String> {
     private String groupCode;
     private String status;
 
-
 }
