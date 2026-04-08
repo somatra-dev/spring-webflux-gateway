@@ -1,11 +1,10 @@
 package co.pesexpo.webfluxgateway.domain;
 
 
-import co.pesexpo.webfluxgateway.config.auditable_jpa.Auditable;
+import co.pesexpo.webfluxgateway.config.auditable_r2dbc.Auditable;
 import lombok.*;
-
 import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.annotation.Version;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Getter
@@ -26,4 +25,7 @@ public class ApiRouteEntity extends Auditable<String> {
     private String description;
     private String groupCode;
     private String status;
+
+    @Version
+    private Long version;
 }

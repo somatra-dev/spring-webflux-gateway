@@ -1,4 +1,4 @@
-package co.pesexpo.webfluxgateway.config.auditable_jpa;
+package co.pesexpo.webfluxgateway.config.auditable_r2dbc;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

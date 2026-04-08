@@ -5,12 +5,15 @@ spring:
   application:
     name: webflux-gateway
 
+  liquibase:
+    enabled: true
+    url: jdbc:postgresql://localhost:16666/postgres
+    user: pro
+    password: pro
+    driver-class-name: org.postgresql.Driver
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
+
   r2dbc:
     url: r2dbc:postgresql://localhost:16666/postgres
     username: pro
     password: pro
-
-  sql:
-    init:
-      mode: always          # runs schema.sql / data.sql on startup
-      schema-locations: classpath:script/data.sql

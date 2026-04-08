@@ -34,7 +34,7 @@ public class ApiRouteController {
     }
 
     @PostMapping()
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.CREATED)
     public Mono<ApiResponse<RouteResponse>> create(@RequestBody CreateRoute createRoute) {
         log.info("Creating route: {}", createRoute);
         return apiRouteService.createRoute(createRoute)

@@ -21,4 +21,6 @@ public class ServiceEntity {
     private String serviceName;
 
     private String description;
+
+    private ApiRouteEntity apiRoute;
 }
